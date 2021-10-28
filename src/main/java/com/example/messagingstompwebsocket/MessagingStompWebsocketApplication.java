@@ -18,7 +18,11 @@ public class MessagingStompWebsocketApplication {
 		return new WebMvcConfigurer() {
 			@Override
 			public void addCorsMappings(CorsRegistry registry) {
-				registry.addMapping("/**").allowCredentials(false).allowedOrigins("*").allowedMethods("*");
+				registry.addMapping("/**")
+					.allowCredentials(false)
+					.allowedOrigins("*")
+					.allowedMethods("GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS")
+					.allowedHeaders("*");
 			}
 		};
 	}
