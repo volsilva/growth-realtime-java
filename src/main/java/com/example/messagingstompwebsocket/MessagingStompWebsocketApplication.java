@@ -20,10 +20,7 @@ public class MessagingStompWebsocketApplication {
 			@Override
 			public void addCorsMappings(CorsRegistry registry) {
 				registry.addMapping("/**")
-//						.allowCredentials(false)
-						.allowedOrigins("*")
-//						.allowedMethods("GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS")
-						.allowedHeaders("Content-Type, Access-Control-Allow-Origin, Access-Control-Allow-Headers, Authorization, X-Requested-With, requestId, Correlation-Id");
+					.allowedOrigins("http://localhost:8080");
 			}
 		};
 	}
